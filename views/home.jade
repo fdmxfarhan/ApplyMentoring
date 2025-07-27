@@ -1,0 +1,536 @@
+doctype html
+html(lang='fa' dir='rtl')
+  head
+    meta(charset='utf-8')
+    title CNC Bartar 
+    meta(http-equiv='X-UA-Compatible' content='IE=Edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='keywords' content)
+    meta(name='description' content)
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,800' rel='stylesheet' type='text/css')
+    link(rel='stylesheet' href='/css/landing/home.css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css')
+  body
+    .slideshow-container
+      .slide.fade
+        img(src='/img/landing/01.jpg' alt='Slide 1')
+        .slide-content
+          h2.title خدمات برش CNC
+          p.description با استفاده از پیشرفته‌ترین دستگاه‌های CNC، برش دقیق و با کیفیت را تجربه کنید
+      .slide.fade
+        img(src='/img/landing/02.jpg' alt='Slide 2')
+        .slide-content
+          h2.title برش لیزر
+          p.description برش لیزری با دقت بالا و کیفیت عالی برای انواع متریال
+      .slide.fade
+        img(src='/img/landing/03.jpg' alt='Slide 3')
+        .slide-content
+          h2.title حکاکی CNC
+          p.description حکاکی دقیق و هنرمندانه با دستگاه‌های CNC پیشرفته
+      .slide.fade
+        img(src='/img/landing/04.jpg' alt='Slide 4')
+        .slide-content
+          h2.title خدمات خمکاری
+          p.description خمکاری دقیق ورق، لوله و پروفیل با دستگاه‌های مدرن
+      //- .slide-controls
+      //-   span.prev(onclick='changeSlide(-1)') &#10094;
+      //-   span.next(onclick='changeSlide(1)') &#10095;
+      .slide-dots
+        span.dot(onclick='currentSlide(1)')
+        span.dot(onclick='currentSlide(2)')
+        span.dot(onclick='currentSlide(3)')
+        span.dot(onclick='currentSlide(4)')
+    
+    nav.navbar
+      .navbar-right
+        a.logo(href='/')
+          img(src='/img/logo.png' alt='CNC Bartar Logo')
+        .mobile-menu-btn
+          span
+          span
+          span
+        .nav-links-container
+          ul.nav-links
+            li
+              a(href='/') صفحه اصلی
+            li.dropdown
+              a خدمات ما
+              .dropdown-content
+                .dropdown-column
+                  h3 خدمات برش
+                  a(href='/services/cnc') برش CNC
+                  a(href='/services/laser') برش لیزر
+                  a(href='/services/waterjet') برش واترجت
+                  a(href='/services/plasma') برش پلاسما
+                .dropdown-column
+                  h3 خدمات حکاکی
+                  a(href='/services/engraving/laser') حکاکی لیزر
+                  a(href='/services/engraving/cnc') حکاکی CNC
+                  a(href='/services/engraving/rotary') حکاکی دورانی
+                .dropdown-column
+                  h3 خدمات خم
+                  a(href='/services/bending/sheet') خم ورق
+                  a(href='/services/bending/tube') خم لوله
+                  a(href='/services/bending/profile') خم پروفیل
+            li.dropdown
+              a محصولات
+              .dropdown-content
+                .dropdown-column
+                  h3 قطعات صنعتی
+                  a(href='/products/industrial/cnc') قطعات CNC
+                  a(href='/products/industrial/laser') قطعات لیزر
+                  a(href='/products/industrial/waterjet') قطعات واترجت
+                  a(href='/products/industrial/plasma') قطعات پلاسما
+                .dropdown-column
+                  h3 قطعات هنری
+                  a(href='/products/artistic/engraving') حکاکی هنری
+                  a(href='/products/artistic/signage') تابلوهای تبلیغاتی
+                  a(href='/products/artistic/decorative') تزئینات دکوراتیو
+                .dropdown-column
+                  h3 قطعات سفارشی
+                  a(href='/products/custom/design') طراحی سفارشی
+                  a(href='/products/custom/prototype') نمونه‌سازی
+                  a(href='/products/custom/production') تولید انبوه
+            li.dropdown
+              a مقالات
+              .dropdown-content
+                .dropdown-column
+                  h3 مقالات فنی
+                  a(href='/articles/technical/cnc') مقالات CNC
+                  a(href='/articles/technical/laser') مقالات لیزر
+                  a(href='/articles/technical/waterjet') مقالات واترجت
+                  a(href='/articles/technical/plasma') مقالات پلاسما
+                .dropdown-column
+                  h3 مقالات آموزشی
+                  a(href='/articles/educational/tutorials') آموزش‌ها
+                  a(href='/articles/educational/guides') راهنماها
+                  a(href='/articles/educational/tips') نکات کاربردی
+                .dropdown-column
+                  h3 اخبار و رویدادها
+                  a(href='/articles/news/industry') اخبار صنعت
+                  a(href='/articles/news/company') اخبار شرکت
+                  a(href='/articles/news/events') رویدادها
+            li.dropdown
+              a درباره ما
+              .dropdown-content
+                .dropdown-column
+                  h3 معرفی
+                  a(href='/about/company') معرفی شرکت
+                  a(href='/about/history') تاریخچه
+                  a(href='/about/team') تیم ما
+                  a(href='/about/certificates') گواهینامه‌ها
+                .dropdown-column
+                  h3 تجهیزات
+                  a(href='/about/equipment/cnc') دستگاه‌های CNC
+                  a(href='/about/equipment/laser') دستگاه‌های لیزر
+                  a(href='/about/equipment/waterjet') دستگاه‌های واترجت
+                  a(href='/about/equipment/plasma') دستگاه‌های پلاسما
+                .dropdown-column
+                  h3 همکاری
+                  a(href='/about/partnership/opportunities') فرصت‌های همکاری
+                  a(href='/about/partnership/careers') فرصت‌های شغلی
+                  a(href='/about/partnership/suppliers') تأمین‌کنندگان
+            li.dropdown
+              a تماس با ما
+              .dropdown-content
+                .dropdown-column
+                  h3 اطلاعات تماس
+                  a(href='/contact/address') آدرس و نقشه
+                  a(href='/contact/phone') شماره‌های تماس
+                  a(href='/contact/email') ایمیل
+                  a(href='/contact/social') شبکه‌های اجتماعی
+                .dropdown-column
+                  h3 فرم‌ها
+                  a(href='/contact/quote') درخواست قیمت
+                  a(href='/contact/support') پشتیبانی
+                  a(href='/contact/feedback') نظرات و پیشنهادات
+                .dropdown-column
+                  h3 ساعات کاری
+                  a(href='/contact/hours') ساعات کاری
+                  a(href='/contact/locations') شعبه‌ها
+                  a(href='/contact/emergency') تماس اضطراری
+          .mobile-extra
+            .search-box
+              input(type='text' placeholder='جستجو...')
+              button.search-btn
+                i.fas.fa-search
+            .social-links
+              a.social-link(href='#' target='_blank')
+                i.fab.fa-instagram
+              a.social-link(href='#' target='_blank')
+                i.fab.fa-whatsapp
+              a.social-link(href='#' target='_blank')
+                i.fab.fa-telegram-plane
+      .navbar-left
+        .search-box
+          input(type='text' placeholder='جستجو...')
+          button.search-btn
+            i.fas.fa-search
+        .social-links
+          a.social-link(href='#' target='_blank')
+            i.fab.fa-instagram
+          a.social-link(href='#' target='_blank')
+            i.fab.fa-whatsapp
+          a.social-link(href='#' target='_blank')
+            i.fab.fa-telegram-plane
+
+    section.about-section
+      h2.section-title درباره سی ان سی برتر
+      .about-content
+        p.about-text
+          | شرکت سی ان سی برتر با بیش از یک دهه تجربه در زمینه خدمات برش و حکاکی، یکی از پیشگامان صنعت در ایران است. ما با استفاده از پیشرفته‌ترین دستگاه‌های CNC، لیزر، واترجت و پلاسما، خدمات برش و حکاکی با دقت بالا را به مشتریان خود ارائه می‌دهیم. تیم متخصص ما با دانش فنی بالا و تجربه کافی، آماده خدمت‌رسانی به صنایع مختلف از جمله خودروسازی، هوافضا، معماری و هنر می‌باشد. ما متعهد به ارائه خدمات با کیفیت، قیمت مناسب و تحویل به موقع هستیم.
+        .contact-buttons
+          a.phone-button(href='tel:+989123456789')
+            i.fas.fa-phone
+            span ۰۹۱۲-۳۴۵-۶۷۸۹
+          a.phone-button(href='tel:+982112345678')
+            i.fas.fa-phone
+            span ۰۲۱-۱۲۳۴-۵۶۷۸
+    
+    section
+      h2.section-title محصولات سی ان سی برتر
+      
+    section.products-section
+      .product-cards
+        .product-card
+          .card-slideshow
+            .card-slide.fade
+              img(src='/img/cncgostar/photo/2-MOKHABERAT/1.jpg' alt='قطعات مخابراتی 1')
+            .card-slide.fade
+              img(src='/img/cncgostar/photo/2-MOKHABERAT/2.jpg' alt='قطعات مخابراتی 2')
+            .card-slide.fade
+              img(src='/img/cncgostar/photo/2-MOKHABERAT/3.jpg' alt='قطعات مخابراتی 3')
+          .card-content
+            h3.card-title قطعات مخابراتی
+            p.card-description
+              | تولید قطعات دقیق و با کیفیت برای صنعت مخابرات با استفاده از دستگاه‌های CNC پیشرفته. خدمات ما شامل برش، حکاکی و ماشینکاری قطعات مخابراتی با دقت بالا و کیفیت برتر است. ما با استفاده از تکنولوژی‌های روز دنیا، قطعات مورد نیاز صنعت مخابرات را با بهترین کیفیت و قیمت مناسب تولید می‌کنیم.
+
+        .product-card
+          .card-slideshow
+            .card-slide.fade
+              img(src='/img/cncgostar/photo/3-NEZAMI/1.jpg' alt='قطعات نظامی 1')
+            .card-slide.fade
+              img(src='/img/cncgostar/photo/3-NEZAMI/2.jpg' alt='قطعات نظامی 2')
+            .card-slide.fade
+              img(src='/img/cncgostar/photo/3-NEZAMI/3.jpg' alt='قطعات نظامی 3')
+          .card-content
+            h3.card-title نظامی
+            p.card-description
+              | ساخت قطعات دقیق و مقاوم برای صنایع نظامی با استانداردهای بالا و کیفیت برتر. ما با استفاده از دستگاه‌های CNC پیشرفته و مواد اولیه با کیفیت، قطعات نظامی را با دقت بالا و مقاومت مناسب تولید می‌کنیم. خدمات ما شامل برش، حکاکی، ماشینکاری و پرداخت قطعات نظامی است.
+
+        .product-card
+          .card-slideshow
+            .card-slide.fade
+              img(src='/img/cncgostar/photo/5-GHALEB/1.jpg' alt='قالب‌سازی 1')
+            .card-slide.fade
+              img(src='/img/cncgostar/photo/5-GHALEB/2.jpg' alt='قالب‌سازی 2')
+            .card-slide.fade
+              img(src='/img/cncgostar/photo/5-GHALEB/3.jpg' alt='قالب‌سازی 3')
+          .card-content
+            h3.card-title قالب سازی
+            p.card-description
+              | طراحی و ساخت قالب‌های دقیق و با کیفیت برای صنایع مختلف با استفاده از تکنولوژی‌های پیشرفته. ما با تجربه بالا در زمینه قالب‌سازی، قالب‌های مورد نیاز صنایع مختلف را با دقت بالا و کیفیت برتر تولید می‌کنیم. خدمات ما شامل طراحی، ساخت و تعمیر قالب‌های مختلف است.
+
+    section.services-showcase
+      .services-container
+        a.service-column(href='/services/cnc')
+          .service-image
+            img(src='/img/cncgostar/photo/1-ASLI/1.jpg' alt='خدمات CNC')
+            .overlay
+            .service-content
+              h3.service-title خدمات CNC
+              .service-link
+                span مشاهده خدمات
+                i.fas.fa-chevron-left
+
+        a.service-column(href='/services/mold')
+          .service-image
+            img(src='/img/cncgostar/photo/4-4 MEHVAR/1.jpg' alt='خدمات قالب سازی')
+            .overlay
+            .service-content
+              h3.service-title خدمات قالب سازی
+              .service-link
+                span مشاهده خدمات
+                i.fas.fa-chevron-left
+
+    section.milling-services
+      .milling-container
+        .milling-images
+          .milling-image
+            img(src='/img/landing/05.jpg' alt='فرز CNC 1')
+          .milling-image
+            img(src='/img/landing/06.jpg' alt='فرز CNC 2')
+          .milling-image
+            img(src='/img/landing/07.jpg' alt='فرز CNC 3')
+        .milling-content
+          h2.milling-title خدمات فرز CNC
+          p.milling-description
+            | با استفاده از پیشرفته‌ترین دستگاه‌های فرز CNC، خدمات ماشینکاری دقیق و با کیفیت را به مشتریان خود ارائه می‌دهیم. تیم متخصص ما با تجربه بالا در زمینه فرزکاری، آماده خدمت‌رسانی به صنایع مختلف می‌باشد.
+          ul.milling-features
+            li
+              i.fas.fa-check
+              span فرزکاری سه محوره و پنج محوره
+            li
+              i.fas.fa-check
+              span ماشینکاری قطعات با پیچیدگی بالا
+            li
+              i.fas.fa-check
+              span تولید قطعات با تلرانس دقیق
+            li
+              i.fas.fa-check
+              span استفاده از نرم‌افزارهای پیشرفته CAD/CAM
+            li
+              i.fas.fa-check
+              span پشتیبانی از فرمت‌های مختلف فایل
+            li
+              i.fas.fa-check
+              span خدمات مشاوره و طراحی
+
+    footer.footer
+      .footer-container
+        .footer-section.quick-access
+          h3.footer-title دسترسی سریع
+          ul.footer-links
+            li
+              a(href='/') صفحه اصلی
+            li
+              a(href='/services') خدمات ما
+            li
+              a(href='/products') محصولات
+            li
+              a(href='/articles') مقالات
+            li
+              a(href='/about') درباره ما
+            li
+              a(href='/contact') تماس با ما
+
+        .footer-section.about
+          h3.footer-title درباره سی ان سی برتر
+          p.footer-description
+            | شرکت سی ان سی برتر با بیش از یک دهه تجربه در زمینه خدمات برش و حکاکی، یکی از پیشگامان صنعت در ایران است. ما با استفاده از پیشرفته‌ترین دستگاه‌های CNC، لیزر، واترجت و پلاسما، خدمات برش و حکاکی با دقت بالا را به مشتریان خود ارائه می‌دهیم.
+
+        .footer-section.contact
+          h3.footer-title تماس با ما
+          .contact-info
+            .contact-item
+              i.fas.fa-map-marker-alt
+              span تهران، خیابان ولیعصر، خیابان فرشته
+            .contact-item
+              i.fas.fa-phone
+              span ۰۲۱-۱۲۳۴-۵۶۷۸
+            .contact-item
+              i.fas.fa-mobile-alt
+              span ۰۹۱۲-۳۴۵-۶۷۸۹
+            .contact-item
+              i.fas.fa-envelope
+              span info@cncbartar.com
+          .social-links
+            a.social-link(href='#' target='_blank')
+              i.fab.fa-instagram
+            a.social-link(href='#' target='_blank')
+              i.fab.fa-whatsapp
+            a.social-link(href='#' target='_blank')
+              i.fab.fa-telegram-plane
+
+      .footer-bottom
+        p.copyright © ۱۴۰۳ سی ان سی برتر. تمامی حقوق محفوظ است.
+
+    script.
+      // Mobile menu functionality
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      const navLinksContainer = document.querySelector('.nav-links-container');
+      const dropdowns = document.querySelectorAll('.dropdown');
+      const navbar = document.querySelector('.navbar');
+
+      // Navbar scroll animation
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navbar.style.margin = '1vw';
+          navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        } else {
+          navbar.style.margin = '3vw';
+          navbar.style.background = 'rgba(255, 255, 255, 0.9)';
+        }
+      });
+
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        navLinksContainer.classList.toggle('active');
+      });
+
+      // Handle dropdowns in mobile view
+      dropdowns.forEach(dropdown => {
+        const dropdownLink = dropdown.querySelector('a');
+        const dropdownContent = dropdown.querySelector('.dropdown-content');
+        
+        dropdownLink.addEventListener('touchend', function(e) {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // Close other dropdowns
+            dropdowns.forEach(otherDropdown => {
+              if (otherDropdown !== dropdown) {
+                otherDropdown.classList.remove('active');
+              }
+            });
+
+            // Toggle current dropdown
+            dropdown.classList.toggle('active');
+
+            // Ensure the dropdown toggle stays in view
+            setTimeout(() => {
+              // Scroll the nav-links-container so the dropdownLink is fully visible
+              const container = navLinksContainer;
+              const linkRect = dropdownLink.getBoundingClientRect();
+              const containerRect = container.getBoundingClientRect();
+
+              if (linkRect.top < containerRect.top) {
+                // If link is above the visible area, scroll up
+                container.scrollTop += linkRect.top - containerRect.top - 10;
+              } else if (linkRect.bottom > containerRect.bottom) {
+                // If link is below the visible area, scroll down
+                container.scrollTop += linkRect.bottom - containerRect.bottom + 10;
+              }
+            }, 10);
+          }
+        });
+
+        // Prevent clicks inside dropdown from bubbling up
+        dropdownContent.addEventListener('click', (e) => {
+          e.stopPropagation();
+        });
+      });
+
+      // Handle link clicks in mobile view
+      const mobileLinks = document.querySelectorAll('.nav-links a, .dropdown-content a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          if (window.innerWidth <= 768) {
+            // Only prevent default for dropdown toggles
+            if (!link.parentElement.classList.contains('dropdown')) {
+              // Close mobile menu after clicking a link
+              mobileMenuBtn.classList.remove('active');
+              navLinksContainer.classList.remove('active');
+              // Reset all dropdowns
+              dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+            }
+          }
+        });
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!navLinksContainer.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+          mobileMenuBtn.classList.remove('active');
+          navLinksContainer.classList.remove('active');
+          // Reset all dropdowns
+          dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+        }
+      });
+
+      // Close mobile menu when window is resized above mobile breakpoint
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+          mobileMenuBtn.classList.remove('active');
+          navLinksContainer.classList.remove('active');
+          dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
+        }
+      });
+
+      // Dropdown handling for all dropdowns
+      dropdowns.forEach(dropdown => {
+        const dropdownContent = dropdown.querySelector('.dropdown-content');
+        let isDropdownOpen = false;
+        let timeoutId;
+
+        function showDropdown() {
+          isDropdownOpen = true;
+          dropdownContent.style.display = 'flex';
+          if (timeoutId) {
+            clearTimeout(timeoutId);
+          }
+        }
+
+        function hideDropdown() {
+          timeoutId = setTimeout(() => {
+            isDropdownOpen = false;
+            dropdownContent.style.display = 'none';
+          }, 200);
+        }
+
+        dropdown.addEventListener('mouseenter', showDropdown);
+        dropdownContent.addEventListener('mouseenter', showDropdown);
+        
+        dropdown.addEventListener('mouseleave', hideDropdown);
+        dropdownContent.addEventListener('mouseleave', hideDropdown);
+      });
+
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function changeSlide(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+        
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (let i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+
+      // Auto slide
+      setInterval(() => {
+        changeSlide(1);
+      }, 5000);
+
+      // Card slideshow functionality
+      function initCardSlideshows() {
+        const cardSlideshows = document.querySelectorAll('.card-slideshow');
+        
+        cardSlideshows.forEach((slideshow, index) => {
+          const slides = slideshow.getElementsByClassName('card-slide');
+          let currentSlide = 0;
+          
+          // Set initial state
+          for (let i = 0; i < slides.length; i++) {
+            slides[i].style.opacity = i === 0 ? '1' : '0';
+            slides[i].style.display = 'block';
+          }
+          
+          // Start each slideshow at a different time
+          setTimeout(() => {
+            // Auto slide for each card
+            setInterval(() => {
+              // Fade out current slide
+              slides[currentSlide].style.opacity = '0';
+              
+              // Move to next slide
+              currentSlide = (currentSlide + 1) % slides.length;
+              
+              // Fade in next slide
+              slides[currentSlide].style.opacity = '1';
+            }, 3000);
+          }, index * 1000); // Start each slideshow 1 second after the previous one
+        });
+      }
+
+      // Initialize card slideshows when the page loads
+      window.addEventListener('load', initCardSlideshows);
+      
