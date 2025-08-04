@@ -1,11 +1,3 @@
-/* modal.css */
-body {
-  font-family: "IRANSans", sans-serif;
-  direction: rtl;
-  margin: 0;
-  padding: 0;
-}
-
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -13,19 +5,19 @@ body {
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .modal-box {
-  background-color: #2b2b2b;
-  color: white;
+  background-color: var(--light);
+  color: var(--dark);
   border-radius: 20px;
   padding: 2rem;
   width: 90%;
-  max-width: 400px;
+  max-width: 500px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   text-align: center;
 }
@@ -49,9 +41,10 @@ body {
   margin-bottom: 1rem;
   border: none;
   border-radius: 10px;
-  background-color: #1e1e1e;
-  color: white;
-  font-size: 1rem;
+  background-color: var(--lightgray);
+  color: var(--textcolor);
+  font-size: 0.9rem;
+  font-family: var(--iransans);
 }
 
 .select-input:focus,
@@ -63,21 +56,33 @@ body {
 .confirm-button {
   width: 100%;
   padding: 0.75rem;
-  background-color: #ff4d4d;
-  color: white;
+  background-color: var(--blue);
+  color: var(--light);
   border: none;
   border-radius: 15px;
   font-size: 1rem;
   margin-bottom: 1rem;
   cursor: pointer;
+  font-family: var(--iransans);
 }
 
 .cancel-button {
-  background: none;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--lightred);
+  color: var(--light);
   border: none;
-  color: #ccc;
+  border-radius: 15px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-family: var(--iransans);
+}
+.cancel-button:hover {
+  background-color: var(--red);
+}
+.confirm-button:hover {
+  background-color: var(--green);
 }
 
 @media (max-width: 480px) {

@@ -124,47 +124,9 @@ var httpsServer = https.createServer(credentials, app);
 const io = require('socket.io')(httpsServer);
 
 
-httpServer.listen(3006);
-httpsServer.listen(4436);
-console.log('server is started :)')
-
-// app.listen(port, () => {
-//   console.log(`Juniorcup is started at port ${port}`);
-// });
-
-
-var seo = require('express-seo')(app);
- 
-// For internatanalization, set the supported languages
-seo.setConfig({
-    langs: ["en", "fa"]
-});
- 
-// Set the default tags
-seo.setDefaults({
-    // html: "<a href='https://www.instagram.com/junior_cup/'>Follow me on instagram</a>" // Special property to insert html in the body (interesting to insert links)
-    title: "جونیورکاپ", // Page title
-    // All the other properties will be inserted as a meta property
-    description: {
-        en: "juniorcup",
-        fa: "جونیور کاپ"
-    },
-    image: "https://juniorcup.ir/images/landing/Juniorcup2021b-min.jpg"
-});
- 
-// Create an seo route
-seo.add("/contact", function(req, opts, next) {
-    /*س
-    req: Express request
-    opts: Object {
-        service: String ("facebook" || "twitter" || "search-engine")
-        lang: String (Detected language)
-    }
-    */
-    next({
-        description: "برگزاری سیزدهمین دوره برگزاری مسابقات رباتیک جوینورکاپ"
-    });
-});
-
+httpServer.listen(3000);
+httpsServer.listen(443);
+console.log('http server is started :)')
+console.log('https server is started :)')
 
 

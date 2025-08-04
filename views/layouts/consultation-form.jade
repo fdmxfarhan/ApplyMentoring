@@ -1,0 +1,30 @@
+link(rel='stylesheet' href='/css/popup.css')
+
+div.modal-overlay#consultation-form-modal
+    div.modal-box
+        h3.modal-title اطلاعات خود را برای مشاوره وارد کنید.
+        p.modal-subtitle مشاوران ما در اولین فرصت با شما تماس خواهند گرفت.
+        form(action="/consultation", method="POST")
+            select.select-input(name="country")
+                option همه کشورها
+                option ایران
+                option کانادا
+                option آلمان
+
+            select.select-input(name="service")
+                option تحصیل
+                option کار
+                option مهاجرت
+
+            input.text-input(type="text", placeholder="نام و نام خانوادگی" name="fullname")
+            input.text-input(type="text", placeholder="شماره موبایل" name="phone")
+
+            button.confirm-button(type="submit") تایید
+        button.cancel-button#consultation-cancel انصراف
+
+script.
+    $(document).ready(()=> {
+        $('#consultation-cancel').click(() =>{
+            $('#consultation-form-modal').hide();
+        })
+    })

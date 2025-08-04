@@ -1,0 +1,25 @@
+/* --------- Declarations ----------- */
+
+@font-face {
+    font-family: 'iransans';
+    src: url('iransans.ttf');
+}
+
+:root {
+    /* --purple: #8305be; */
+    --iransans: 'iransans';
+    --purple: #1971e4;
+    --yellow: #ffcc00;
+    --hover: #8305be;
+    --dark: #050507;
+    --light: white;
+    --lightgray: #f5f5f5;
+    --gray: #808080;
+    --textgray: #666666;
+    --orange: #ff7b00;
+    --red: #ff006a;
+    --lightred: #ed7fa2;
+    --blue: rgb(0, 140, 255);
+    --textcolor: rgb(29, 29, 29);
+    --green: #25c485;
+}
