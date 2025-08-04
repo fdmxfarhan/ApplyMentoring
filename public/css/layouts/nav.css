@@ -185,15 +185,60 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5vw 1vw;
-  font-size: 1vw;
+  padding: 8px 16px;
+  font-size: 14px;
   font-weight: 500;
   cursor: pointer;
   font-family: var(--iransans);
+  transition: all 0.3s ease;
 }
+
+.consultation-btn button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .consultation-btn button i{
-  font-size: 1.5vw;
-  margin-right: 1vw;
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+/* Responsive styles for consultation button */
+@media screen and (min-width: 768px) {
+  .consultation-btn button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .consultation-btn button i {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .consultation-btn button {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
+  
+  .consultation-btn button i {
+    font-size: 22px;
+    margin-right: 12px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .consultation-btn button {
+    padding: 14px 28px;
+    font-size: 20px;
+  }
+  
+  .consultation-btn button i {
+    font-size: 24px;
+    margin-right: 14px;
+  }
 }
 
 

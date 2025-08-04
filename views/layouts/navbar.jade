@@ -53,10 +53,10 @@ nav.navbar
             li
               a(href="#")  تماس با ما
           .mobile-extra
-            .search-box
-              input(type='text' placeholder='جستجو...')
-              button.search-btn
-                i.fas.fa-search
+            //- .search-box
+            //-   input(type='text' placeholder='جستجو...')
+            //-   button.search-btn
+            //-     i.fas.fa-search
             .social-links
               a.social-link(href='#' target='_blank')
                 i.fab.fa-instagram
@@ -64,6 +64,10 @@ nav.navbar
                 i.fab.fa-whatsapp
               a.social-link(href='#' target='_blank')
                 i.fab.fa-telegram-plane
+            .consultation-btn
+              button.consultation-btn-text(onclick="document.querySelector('#consultation-form-modal').style.display = 'flex'") 
+                | مشاوره رایگان
+                i.fas.fa-phone-alt
       .navbar-left
         //- .search-box
         //-   input(type='text' placeholder='جستجو...')
