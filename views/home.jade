@@ -9,6 +9,7 @@ html(lang='fa' dir='rtl')
     meta(name='description' content)
     link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,800' rel='stylesheet' type='text/css')
     link(rel='stylesheet' href='/css/landing/home.css')
+    link(rel='stylesheet' href='/css/popup.css')
     link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css')
   body
     .slideshow-container
@@ -40,7 +41,31 @@ html(lang='fa' dir='rtl')
         span.dot(onclick='currentSlide(2)')
         span.dot(onclick='currentSlide(3)')
         span.dot(onclick='currentSlide(4)')
-    
+    //- modal.jade
+    button(onclick="document.querySelector('.modal-overlay').style.display = 'flex'") باز کردن فرم مشاوره
+
+    div.modal-overlay
+      div.modal-box
+        h3.modal-title اطلاعات خود را برای مشاوره وارد کنید.
+        p.modal-subtitle مشاوران ما در اولین فرصت با شما تماس خواهند گرفت.
+        form(action="/consultation", method="POST")
+          select.select-input(name="country")
+            option همه کشورها
+            option ایران
+            option کانادا
+            option آلمان
+
+          select.select-input(name="service")
+            option تحصیل
+            option کار
+            option مهاجرت
+
+          input.text-input(type="text", placeholder="نام و نام خانوادگی" name="fullname")
+          input.text-input(type="text", placeholder="شماره موبایل" name="phone")
+
+          button.confirm-button(type="submit") تایید
+        button.cancel-button انصراف
+
     nav.navbar
       .navbar-right
         a.logo(href='/')
@@ -60,7 +85,7 @@ html(lang='fa' dir='rtl')
                   h3 خدمات مشاوره
                   a(href='/services/consultation') مشاوره رایگان
                   a(href='/services/private-consultation') مشاوره اختصاصی
-                  a(href='/services/faq') سوالات پر تکرار
+                  a(href='/services/faq') سوالات پر   تکرار
                   a(href='/services/contact') تماس با ما
                 .dropdown-column
                   h3 خدمات اپلای
