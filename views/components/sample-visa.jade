@@ -1,0 +1,17 @@
+link(rel="stylesheet", href="/css/components/sample-visa.css")
+
+.div-horizontal-cards
+  h1.title-horizontal-cards
+    | نمونه ویزاهای موفق
+
+  .visa-scroll-wrapper
+    button.visa-scroll-btn.right
+      i.fa.fa-chevron-right
+    .visa-cards-container
+      each image in ['01', '02', '03', '04', '05', '06', '07', '08', '09']
+        .visa-card
+          img(src=`/img/visa/${image}.webp`, alt="تصویر")
+    button.visa-scroll-btn.left
+      i.fa.fa-chevron-left
+
+script(src="/js/components/sample-visa.js")

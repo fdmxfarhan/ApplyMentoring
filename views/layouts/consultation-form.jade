@@ -1,4 +1,4 @@
-link(rel='stylesheet' href='/css/popup.css')
+link(rel='stylesheet' href='/css/layouts/popup.css')
 
 div.modal-overlay#consultation-form-modal
     div.modal-box
@@ -6,15 +6,15 @@ div.modal-overlay#consultation-form-modal
         p.modal-subtitle مشاوران ما در اولین فرصت با شما تماس خواهند گرفت.
         form(action="/consultation", method="POST")
             select.select-input(name="country")
-                option همه کشورها
-                option ایران
-                option کانادا
-                option آلمان
+                for country in countries
+                    option= country
+
 
             select.select-input(name="service")
                 option تحصیل
                 option کار
                 option مهاجرت
+                option سرمایه گذاری
 
             input.text-input(type="text", placeholder="نام و نام خانوادگی" name="fullname")
             input.text-input(type="text", placeholder="شماره موبایل" name="phone")

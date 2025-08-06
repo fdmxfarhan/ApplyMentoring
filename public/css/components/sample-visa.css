@@ -1,0 +1,91 @@
+.div-horizontal-cards {
+    direction: rtl;
+    font-family: 'IranSans', sans-serif;
+    padding: 1vw 10%;
+    position: relative;
+}
+  
+.title-horizontal-cards {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--blue);
+}
+  
+.visa-scroll-wrapper {
+    position: relative;
+}
+  
+.visa-cards-container {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    padding: 0 3rem; /* space for buttons */
+    transition-duration: 100ms;
+}
+  
+.visa-cards-container::-webkit-scrollbar {
+    display: none;
+}
+  
+.visa-card {
+    flex: 0 0 auto;
+    width: 30vw;
+    scroll-snap-align: start;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+  
+.visa-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+  
+  /* Chevron buttons */
+.visa-scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px;
+}
+  
+.visa-scroll-btn.left {
+    left: -2.5rem;
+}
+  
+.visa-scroll-btn.right {
+    right: -2.5rem;
+}
+  
+.visa-scroll-btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+  
+.chevron-icon {
+    transform: scaleX(-1);
+}
+@media (max-width: 768px) {
+    .visa-card {
+        width: 80vw;
+    }
+}

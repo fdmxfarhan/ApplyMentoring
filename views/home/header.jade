@@ -1,0 +1,33 @@
+link(rel="stylesheet", href="/css/home/header.css")
+.header-container
+    .header-content
+        .info-section
+            h1.main-title موسسه مهاجرتی اپلای منتورینگ
+            p.description
+                | ما با سال‌ها تجربه در زمینه مهاجرت و تحصیل در خارج، آماده ارائه بهترین خدمات مشاوره‌ای و راهنمایی شما در مسیر موفقیت هستیم.
+            .buttons-container
+                a.btn.btn-primary#header-consulation-btn
+                    i.fas.fa-calendar-alt
+                    | رزرو وقت مشاوره
+                a.btn.btn-secondary(href="#assessment")
+                    i.fas.fa-clipboard-list
+                    | فرم ارزیابی
+        .header-slideshow-container
+            .header-slide.slide-1.active
+                img(src="/img/landing/01.jpg" alt="خدمات مهاجرتی")
+            .header-slide.slide-2
+                img(src="/img/landing/02.jpg" alt="مشاوره تحصیلی")
+            .header-slide.slide-3
+                img(src="/img/landing/03.jpg" alt="همراهی و راهنمایی")
+            .header-slide-indicators
+                .header-indicator.active(onclick="currentSlide(1)")
+                .header-indicator(onclick="currentSlide(2)")
+                .header-indicator(onclick="currentSlide(3)")
+
+script(src="/js/home/header.js")
+script.
+    $(document).ready(() => {
+        $('#header-consulation-btn').click(() => {
+            $('#consultation-form-modal').css('display', 'flex');
+        })
+    })

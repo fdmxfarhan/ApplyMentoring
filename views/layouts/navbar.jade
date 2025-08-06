@@ -12,46 +12,31 @@ nav.navbar
             li
               a(href='/') صفحه اصلی
             li.dropdown
-              a خدمات ما
+              a مهاجرت تحصیلی
               .dropdown-content
-                .dropdown-column
-                  h3 خدمات مشاوره
-                  a(href='/services/consultation') مشاوره رایگان
-                  a(href='/services/private-consultation') مشاوره اختصاصی
-                  a(href='/services/faq') سوالات پر   تکرار
-                  a(href='/services/contact') تماس با ما
-                .dropdown-column
-                  h3 خدمات اپلای
-                  a(href='/services/document-review') بررسی مدارک
-                  a(href='/services/document-submission') ارسال مدارک
-                  a(href='/services/university-registration') ثبت نام دانشگاه
-                .dropdown-column
-                  h3 خدمات بورسیه
-                  a(href='/services/italy-scholarship') بورسیه استانی ایتالیا
-                  a(href='/services/canada-funding') پوزیشن های فول فاند کانادا
-                  a(href='/services/usa-funding') پوزیشن های فول فاند آمریکا
+                -for(var i=0; i < countries.length; i += 5){
+                  .dropdown-column
+                    -for(var j=0; j < 5 && i+j < countries.length; j += 1){
+                      a(href='/services/consultation') 
+                        i.fa.fa-square
+                        | #{countries[i+j]}
+                    -}
+                -}
             li.dropdown
-              a لیست دانشگاه‌ها
+              a مهاجرت کاری
               .dropdown-content
-                .dropdown-column
-                  h3 اروپا
-                  a(href='/universities/italy') ایتالیا
-                  a(href='/universities/finland') فنلاند
-                  a(href='/universities/netherlands') هلند
-                  a(href='/universities/hungary') مجارستان
-                .dropdown-column
-                  h3 آسیا
-                  a(href='/universities/china') چین
-                  a(href='/universities/japan') ژاپن
-                  a(href='/universities/uae') دبی
-                .dropdown-column
-                  h3 آمریکا
-                  a(href='/universities/usa') آمریکا
-                  a(href='/universities/canada') کانادا
+                -for(var i=0; i < countries.length; i += 5){
+                  .dropdown-column
+                    -for(var j=0; j < 5 && i+j < countries.length; j += 1){
+                      a(href='/services/consultation') 
+                        i.fa.fa-square
+                        | #{countries[i+j]}
+                    -}
+                -}
             li
-              a(href="#")  درباره ما
+              a(href="/aboutus")  درباره ما
             li
-              a(href="#")  تماس با ما
+              a(href="/contacts")  تماس با ما
           .mobile-extra
             //- .search-box
             //-   input(type='text' placeholder='جستجو...')
@@ -95,10 +80,10 @@ script.
     // Navbar scroll animation
     window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-        navbar.style.margin = '1vw';
+        navbar.style.margin = '0.1vw';
         navbar.style.background = 'rgba(255, 255, 255, 0.95)';
     } else {
-        navbar.style.margin = '3vw';
+        navbar.style.margin = '1vw';
         navbar.style.background = 'rgba(255, 255, 255, 0.9)';
     }
     });

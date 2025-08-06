@@ -11,7 +11,7 @@
   padding: 1vw 3vw;
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.178);
-  margin: 3vw;
+  margin: 1vw;
   border-radius: 1vw;
   transition: all 0.3s ease;
 }
@@ -166,6 +166,10 @@
   text-align: right;
   font-size: 1vw;
   transition: all 0.3s ease;
+}
+.dropdown-content a i{
+  margin-left: 0.5vw;
+  color: var(--gray);
 }
 
 .dropdown-content a:hover {

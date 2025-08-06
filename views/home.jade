@@ -8,6 +8,7 @@ html(lang='fa' dir='rtl')
     meta(name='keywords' content)
     meta(name='description' content)
     script(src="/js/jquery-3.5.1.min.js")
+    //- link(rel="stylesheet" href="/fontawesome-free-6.6.0-web/css/all.css")
     link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,800' rel='stylesheet' type='text/css')
     link(rel='stylesheet' href='/css/theme.css')
     link(rel='stylesheet' href='/css/landing/home.css')
@@ -15,36 +16,38 @@ html(lang='fa' dir='rtl')
   body
     include layouts/consultation-form
 
-    .slideshow-container
-      .slide.fade
-        img(src='/img/landing/01.jpg' alt='Slide 1')
-        .slide-content
-          h2.title اپلای منتورینگ
-          p.description مشاوره مهاجرت تحصیلی و کاری
-      .slide.fade
-        img(src='/img/landing/02.jpg' alt='Slide 2')
-        .slide-content
-          h2.title اپلای منتورینگ
-          p.description بورسیه تحصیلی
-      .slide.fade
-        img(src='/img/landing/03.jpg' alt='Slide 3')
-        .slide-content
-          h2.title اپلای منتورینگ
-          p.description ترجمه و ارسال مدارک تحصیلی به دانشگاه
-      .slide.fade
-        img(src='/img/landing/04.jpg' alt='Slide 4')
-        .slide-content
-          h2.title اپلای منتورینگ
-          p.description مکاتبه با اساتید جهت گرفتن فاند
-      //- .slide-controls
-      //-   span.prev(onclick='changeSlide(-1)') &#10094;
-      //-   span.next(onclick='changeSlide(1)') &#10095;
-      .slide-dots
-        span.dot(onclick='currentSlide(1)')
-        span.dot(onclick='currentSlide(2)')
-        span.dot(onclick='currentSlide(3)')
-        span.dot(onclick='currentSlide(4)')
+    //- .slideshow-container
+    //-   .slide.fade
+    //-     img(src='/img/landing/01.jpg' alt='Slide 1')
+    //-     .slide-content
+    //-       h2.title اپلای منتورینگ
+    //-       p.description مشاوره مهاجرت تحصیلی و کاری
+    //-   .slide.fade
+    //-     img(src='/img/landing/02.jpg' alt='Slide 2')
+    //-     .slide-content
+    //-       h2.title اپلای منتورینگ
+    //-       p.description بورسیه تحصیلی
+    //-   .slide.fade
+    //-     img(src='/img/landing/03.jpg' alt='Slide 3')
+    //-     .slide-content
+    //-       h2.title اپلای منتورینگ
+    //-       p.description ترجمه و ارسال مدارک تحصیلی به دانشگاه
+    //-   .slide.fade
+    //-     img(src='/img/landing/04.jpg' alt='Slide 4')
+    //-     .slide-content
+    //-       h2.title اپلای منتورینگ
+    //-       p.description مکاتبه با اساتید جهت گرفتن فاند
+    //-   //- .slide-controls
+    //-   //-   span.prev(onclick='changeSlide(-1)') &#10094;
+    //-   //-   span.next(onclick='changeSlide(1)') &#10095;
+    //-   .slide-dots
+    //-     span.dot(onclick='currentSlide(1)')
+    //-     span.dot(onclick='currentSlide(2)')
+    //-     span.dot(onclick='currentSlide(3)')
+    //-     span.dot(onclick='currentSlide(4)')
     include layouts/navbar
+
+    include home/header
 
 
     section.about-section
@@ -156,7 +159,7 @@ html(lang='fa' dir='rtl')
             li
               i.fas.fa-check
               span پیگیری مراحل پذیرش
-
+    include components/sample-visa
     footer.footer
       .footer-container
         .footer-section.quick-access
@@ -207,70 +210,70 @@ html(lang='fa' dir='rtl')
         p.copyright © ۱۴۰۳ اپلای منتورینگ. تمامی حقوق محفوظ است.
 
     script.
-      let slideIndex = 1;
-      showSlides(slideIndex);
+      //- let slideIndex = 1;
+      //- showSlides(slideIndex);
 
-      function changeSlide(n) {
-        showSlides(slideIndex += n);
-      }
+      //- function changeSlide(n) {
+      //-   showSlides(slideIndex += n);
+      //- }
 
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
+      //- function currentSlide(n) {
+      //-   showSlides(slideIndex = n);
+      //- }
 
-      function showSlides(n) {
-        let slides = document.getElementsByClassName("slide");
-        let dots = document.getElementsByClassName("dot");
+      //- function showSlides(n) {
+      //-   let slides = document.getElementsByClassName("slide");
+      //-   let dots = document.getElementsByClassName("dot");
         
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
+      //-   if (n > slides.length) {slideIndex = 1}
+      //-   if (n < 1) {slideIndex = slides.length}
         
-        for (let i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (let i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
+      //-   for (let i = 0; i < slides.length; i++) {
+      //-     slides[i].style.display = "none";
+      //-   }
+      //-   for (let i = 0; i < dots.length; i++) {
+      //-     dots[i].className = dots[i].className.replace(" active", "");
+      //-   }
         
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-      }
+      //-   slides[slideIndex-1].style.display = "block";
+      //-   dots[slideIndex-1].className += " active";
+      //- }
 
-      // Auto slide
-      setInterval(() => {
-        changeSlide(1);
-      }, 5000);
+      //- // Auto slide
+      //- setInterval(() => {
+      //-   changeSlide(1);
+      //- }, 5000);
 
       // Card slideshow functionality
-      function initCardSlideshows() {
-        const cardSlideshows = document.querySelectorAll('.card-slideshow');
+      //- function initCardSlideshows() {
+      //-   const cardSlideshows = document.querySelectorAll('.card-slideshow');
         
-        cardSlideshows.forEach((slideshow, index) => {
-          const slides = slideshow.getElementsByClassName('card-slide');
-          let currentSlide = 0;
+      //-   cardSlideshows.forEach((slideshow, index) => {
+      //-     const slides = slideshow.getElementsByClassName('card-slide');
+      //-     let currentSlide = 0;
           
-          // Set initial state
-          for (let i = 0; i < slides.length; i++) {
-            slides[i].style.opacity = i === 0 ? '1' : '0';
-            slides[i].style.display = 'block';
-          }
+      //-     // Set initial state
+      //-     for (let i = 0; i < slides.length; i++) {
+      //-       slides[i].style.opacity = i === 0 ? '1' : '0';
+      //-       slides[i].style.display = 'block';
+      //-     }
           
-          // Start each slideshow at a different time
-          setTimeout(() => {
-            // Auto slide for each card
-            setInterval(() => {
-              // Fade out current slide
-              slides[currentSlide].style.opacity = '0';
+      //-     // Start each slideshow at a different time
+      //-     setTimeout(() => {
+      //-       // Auto slide for each card
+      //-       setInterval(() => {
+      //-         // Fade out current slide
+      //-         slides[currentSlide].style.opacity = '0';
               
-              // Move to next slide
-              currentSlide = (currentSlide + 1) % slides.length;
+      //-         // Move to next slide
+      //-         currentSlide = (currentSlide + 1) % slides.length;
               
-              // Fade in next slide
-              slides[currentSlide].style.opacity = '1';
-            }, 3000);
-          }, index * 1000); // Start each slideshow 1 second after the previous one
-        });
-      }
+      //-         // Fade in next slide
+      //-         slides[currentSlide].style.opacity = '1';
+      //-       }, 3000);
+      //-     }, index * 1000); // Start each slideshow 1 second after the previous one
+      //-   });
+      //- }
 
-      // Initialize card slideshows when the page loads
-      window.addEventListener('load', initCardSlideshows);
+      //- // Initialize card slideshows when the page loads
+      //- window.addEventListener('load', initCardSlideshows);
