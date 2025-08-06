@@ -180,7 +180,7 @@
     }
     
     .header-content {
-        flex-direction: column;
+        display: block;
         min-height: auto;
     }
     

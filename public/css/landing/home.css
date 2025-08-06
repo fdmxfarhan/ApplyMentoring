@@ -426,6 +426,12 @@ body {
   transition: transform 0.3s ease;
 }
 
+.product-card img.single{
+  height: 19vw;
+  display: block;
+  margin: 0 auto;
+  
+}
 .product-card:hover {
   transform: translateY(-5px);
 }
@@ -920,6 +926,9 @@ body {
 
   .footer .social-links {
     justify-content: center;
+  }
+  .product-card img.single{
+    height: 30vh;
   }
 }
 
