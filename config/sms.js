@@ -34,7 +34,7 @@ module.exports = (phone, text) => {
         url: 'https://api2.ippanel.com/api/v1/sms/send/webservice/single',
         headers: {
             'Content-Type': 'application/json',
-            'apikey': 'OWY2NWM5ZjktNDk2Mi00ZmEwLWI5OTUtMzdkOTk3NjM0ZTlkYWQ0N2M4ZjhmYzJmMzU4ZDdjZDcwMmQxNmMzZWI1MTE=',
+            'apikey': 'OWY5ODU2ZDAtNWMzMy00N2ZjLWEyZmQtYTBjZGE3MGExMmEwNTNkMGExNjY1OWM0Mzk1ZTE1NDEzYWUzM2M2ZDVhOTQ=',
             // 'X-SANDBOX': 0,
         },
         body: {
