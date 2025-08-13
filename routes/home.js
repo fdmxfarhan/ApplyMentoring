@@ -18,7 +18,7 @@ router.get('/', (req, res, next) => {
 
 router.post('/consultation', (req, res) => {
     var {country, service, fullname, phone} = req.body;
-    sms('+989363086017', 'کشور: ' + country + '\nخدمات: ' + service + '\nنام و نام خانوادگی: ' + fullname + '\nشماره تماس: ' + phone);
+    // sms('+989363086017', 'کشور: ' + country + '\nخدمات: ' + service + '\nنام و نام خانوادگی: ' + fullname + '\nشماره تماس: ' + phone);
     mail('rezaestaji80@gmail.com', 'درخواست مشاوره جدید', 'کشور: ' + country + '\nخدمات: ' + service + '\nنام و نام خانوادگی: ' + fullname + '\nشماره تماس: ' + phone);
     res.send('done!')
 });
