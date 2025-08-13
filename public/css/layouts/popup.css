@@ -20,8 +20,17 @@
   max-width: 500px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   text-align: center;
+  position: relative;
 }
-
+.close-btn{
+  position: absolute;
+  left: 1vw;
+  top: 1vw;
+  cursor: pointer;
+}
+.close-btn:hover{
+  color: var(--red);
+}
 .modal-title {
   font-size: 1.25rem;
   font-weight: bold;

@@ -5,19 +5,28 @@ var User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const mail = require('../config/mail');
 const passport = require('passport');
+const { countries, workCountries } = require('../config/consts');
 
 router.get('/register', (req, res, next) => {
     if(req.user)
         res.redirect('/dashboard');
-    else
-        res.render('register');
+    else{
+        res.render('./users/register', {
+            countries,
+            workCountries,
+        });
+    }
 });
 
 router.get('/login', (req, res, next) => {
     if(req.user)
         res.redirect('/dashboard');
-    else
-        res.render('login');
+    else{
+        res.render('./users/login', {
+            countries,
+            workCountries,
+        });
+    }
 });
   
 router.post('/register', (req, res, next) => {
@@ -39,7 +48,15 @@ router.post('/register', (req, res, next) => {
     }
     ///////////send evreything 
     if(errors.length > 0 ){
-        res.render('register', { firstName, lastName, phone, idNumber, errors});
+        res.render('./users/register', { 
+            firstName, 
+            lastName, 
+            phone, 
+            idNumber, 
+            errors,
+            countries,
+            workCountries,
+        });
     }
     else{
         const fullname = firstName + ' ' + lastName;
@@ -49,7 +66,15 @@ router.post('/register', (req, res, next) => {
             if(user){
                 // user exist
                 errors.push({msg: 'کد ملی قبلا ثبت شده است.'});
-                res.render('register', { firstName, lastName, phone, idNumber, errors });
+                res.render('./users/register', { 
+                    firstName, 
+                    lastName, 
+                    phone, 
+                    idNumber, 
+                    errors,
+                    countries,
+                    workCountries,
+                });
             }
             else {
                 const newUser = new User({ipAddress, fullname, firstName, lastName, phone, idNumber, password, role, card});
@@ -78,7 +103,13 @@ router.post('/login', function(req, res, next){
       errors.push({msg: 'لطفا موارد خواسته شده را کامل کنید!'});
     }
     if(errors.length > 0 ){
-      res.render('login', { errors, username, password});
+        res.render('./users/login', { 
+            errors, 
+            username, 
+            password,
+            countries,
+            workCountries,
+        });
     }
     passport.authenticate('local', {
       successRedirect: '/dashboard?login=true',

@@ -1,0 +1,20 @@
+extends ../layouts/layout
+
+block styles 
+  link(rel="stylesheet", href="/css/layouts/two-col-layout.css")
+
+block content
+  .wrapper
+    .sidebar-container-view
+      .sidebar
+        h2 Sidebar
+        ul
+          li Home
+          li About
+          li Services
+          li Contact
+    .main-content
+      .content 
+        h1 Main Content
+        p This is the main area of the page.
+        p You can put articles, images, or any content here.

@@ -2,12 +2,14 @@ link(rel='stylesheet' href='/css/layouts/popup.css')
 
 div.modal-overlay#consultation-form-modal
     div.modal-box
+        .close-btn#close-popup-times 
+            i.fa.fa-times
         h3.modal-title اطلاعات خود را برای مشاوره وارد کنید.
         p.modal-subtitle مشاوران ما در اولین فرصت با شما تماس خواهند گرفت.
         form(action="/consultation", method="POST")
             select.select-input(name="country")
                 for country in countries
-                    option= country
+                    option(value="#{country.name}")= country.name
 
 
             select.select-input(name="service")
@@ -25,6 +27,9 @@ div.modal-overlay#consultation-form-modal
 script.
     $(document).ready(()=> {
         $('#consultation-cancel').click(() =>{
+            $('#consultation-form-modal').hide();
+        })
+        $('#close-popup-times').click(() =>{
             $('#consultation-form-modal').hide();
         })
     })

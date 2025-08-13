@@ -208,6 +208,13 @@
   margin-right: 8px;
 }
 
+img.flag{
+  height: 10px;
+  margin-left: 0.5vw;
+}
+.navbar-vertical-space{
+  height: 16vh;
+}
 /* Responsive styles for consultation button */
 @media screen and (min-width: 768px) {
   .consultation-btn button {
@@ -428,3 +435,4 @@
     display: none !important;
   }
 }
+

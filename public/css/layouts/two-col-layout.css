@@ -1,0 +1,17 @@
+.wrapper{
+  padding: 10px 10%;
+  flex-direction: row-reverse;
+  display: flex;
+}
+.sidebar-container-view{
+  width: 25%;
+  margin-right: 5%;
+}
+.main-content{
+  width: 70%;
+}
+.sidebar, .content{
+  background-color: white;
+  /* border-radius: 10px; */
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+}

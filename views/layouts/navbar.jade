@@ -17,9 +17,9 @@ nav.navbar
                 -for(var i=0; i < countries.length; i += 5){
                   .dropdown-column
                     -for(var j=0; j < 5 && i+j < countries.length; j += 1){
-                      a(href='/services/consultation') 
-                        i.fa.fa-square
-                        | #{countries[i+j]}
+                      a(href='/study-imigration?country=#{countries[i+j].id}') 
+                        img.flag(src="/img/flags/#{countries[i+j].id}.svg", alt="")
+                        | #{countries[i+j].name}
                     -}
                 -}
             li.dropdown
@@ -29,8 +29,8 @@ nav.navbar
                   .dropdown-column
                     -for(var j=0; j < 5 && i+j < countries.length; j += 1){
                       a(href='/services/consultation') 
-                        i.fa.fa-square
-                        | #{countries[i+j]}
+                        img.flag(src="/img/flags/#{workCountries[i+j].id}.svg", alt="")
+                        | #{workCountries[i+j].name}
                     -}
                 -}
             li
