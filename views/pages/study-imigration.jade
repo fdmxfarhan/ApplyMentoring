@@ -7,14 +7,45 @@ block content
   .wrapper
     .sidebar-container-view
       .sidebar
-        h2 Sidebar
-        ul
-          li Home
-          li About
-          li Services
-          li Contact
+        .contact-info 
+          a.button#open-consultation-btn درخواست مشاوره
+          a.link(href="tel:۰۹۱۹۲۱۷۴۱۰۴")
+            i.fa.fa-phone
+            | ۰۹۱۹۲۱۷۴۱۰۴
+        h1.title
+          i.fa.fa-circle
+          | دسترسی سریع
+        .cards-view 
+          a.card(href="#") 
+            i.fa.fa-user-graduate
+            h1 تحصیل
+          a.card(href="#") 
+            i.fa.fa-briefcase
+            h1 کار
+          a.card(href="#") 
+            i.fa.fa-calendar-alt
+            h1 مهاجرت
+          a.card(href="#") 
+            i.fa.fa-passport
+            h1 ویزا
+          a.card(href="#") 
+            i.fa.fa-home
+            h1 زندگی
+          a.card(href="#") 
+            i.fa.fa-plane-departure
+            h1 سفر
+          
+        h1.title
+          i.fa.fa-circle
+          | مقالات اخیر
+        
     .main-content
       .content 
-        h1 Main Content
-        p This is the main area of the page.
-        p You can put articles, images, or any content here.
+        h1.main-title
+          i.fa.fa-circle
+          | مهاجرت تحصیلی به #{countryName}
+        if user && user.role == 'admin'
+          a.edit-page(href="/edit-study-imigration?countryID=#{countryID}&countryName=#{countryName}") 
+            i.fa.fa-edit
+        if studyPost 
+          .main-content!= studyPost.content

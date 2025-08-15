@@ -1,18 +1,19 @@
 /* --------- Declarations ----------- */
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
-    font-family: 'iransans', 'Open Sans', sans-serif;
+    font-family: 'iransans';
     transition: padding-top 0.3s ease;
     direction: rtl;
     text-align: right;
 }
-  
+
 @font-face {
     font-family: 'iransans';
     src: url('iransans.ttf');
 }
-
+.hide{display: none;}
 :root {
     /* --purple: #8305be; */
     --iransans: 'iransans';
@@ -34,6 +35,6 @@ body, html {
     --green: #25c485;
 }
 
-body{
+body {
     background-color: var(--light-background);
 }

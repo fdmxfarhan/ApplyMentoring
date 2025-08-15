@@ -46,7 +46,7 @@ block content
             | ورود
         form(action="/users/login" id="register" method="POST")
             .text-input-area
-                input.textinput(type="text" placeholder="کد پرسنل" name="username" value= "#{ typeof uname != 'undefined' ? uname: '' }")
+                input.textinput(type="text" placeholder="نام کاربری" name="username" value= "#{ typeof uname != 'undefined' ? uname: '' }")
                 i.fa.fa-user
             .text-input-area
                 input.textinput(type="password" placeholder="رمز عبور" name="password" value= "#{ typeof psw != 'undefined' ? psw: '' }")

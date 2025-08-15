@@ -14,16 +14,17 @@ const passport = require('passport');
 
 
 // routs requirement
+var uploadHandler = require('./routes/upload');
 var homeRoute = require('./routes/home');
 var usersRoute = require('./routes/users');
 var dashboardRoute = require('./routes/dashboard');
 
 
 // Mongo DB connect
-// mongoose.connect('mongodb://localhost/sibche', {useNewUrlParser: true, useUnifiedTopology: true}, (err) =>{
-//     if(err) throw err;
-//     else console.log('Database connected :)');
-// });
+mongoose.connect('mongodb://localhost/applymentoring', {useNewUrlParser: true, useUnifiedTopology: true}, (err) =>{
+    if(err) throw err;
+    else console.log('Database connected :)');
+});
 
 
 // express session middleware
@@ -71,7 +72,7 @@ var credentials = {key: privateKey, cert: certificate};
 const port = 3000
 
 // Upload
-// app.use('/upload', uploadHandler);
+app.use('/upload', uploadHandler);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

@@ -17,7 +17,7 @@ nav.navbar
                 -for(var i=0; i < countries.length; i += 5){
                   .dropdown-column
                     -for(var j=0; j < 5 && i+j < countries.length; j += 1){
-                      a(href='/study-imigration?country=#{countries[i+j].id}') 
+                      a(href='/study-imigration?countryID=#{countries[i+j].id}&countryName=#{countries[i+j].name}') 
                         img.flag(src="/img/flags/#{countries[i+j].id}.svg", alt="")
                         | #{countries[i+j].name}
                     -}

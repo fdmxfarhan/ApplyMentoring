@@ -112,7 +112,7 @@ router.post('/login', function(req, res, next){
         });
     }
     passport.authenticate('local', {
-      successRedirect: '/dashboard?login=true',
+      successRedirect: '/',
       failureRedirect: '/users/login',
       failureFlash: true
     })(req, res, next);
